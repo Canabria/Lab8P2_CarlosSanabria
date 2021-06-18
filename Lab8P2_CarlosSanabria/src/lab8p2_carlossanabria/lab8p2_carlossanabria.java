@@ -67,7 +67,7 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         TF_VIN = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        JB_AgregarPersona = new javax.swing.JButton();
+        JB_AgregarAuto = new javax.swing.JButton();
         TF_Color = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         TF_Precio = new javax.swing.JTextField();
@@ -86,8 +86,9 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         JS_Ensamblaje = new javax.swing.JSpinner();
         jScrollPane3 = new javax.swing.JScrollPane();
         JT_ListarAutos = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        JB_Modificar = new javax.swing.JButton();
+        JB_Eliminar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -118,10 +119,10 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel17.setText("Tipo de Auto: ");
 
-        JB_AgregarPersona.setText("Agregar");
-        JB_AgregarPersona.addMouseListener(new java.awt.event.MouseAdapter() {
+        JB_AgregarAuto.setText("Agregar");
+        JB_AgregarAuto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JB_AgregarPersonaMouseClicked(evt);
+                JB_AgregarAutoMouseClicked(evt);
             }
         });
 
@@ -175,75 +176,94 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(JT_ListarAutos);
 
-        jButton1.setText("jButton1");
+        JB_Modificar.setText("Modificar Auto");
+        JB_Modificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_ModificarMouseClicked(evt);
+            }
+        });
 
-        jButton2.setText("jButton2");
+        JB_Eliminar.setText("Eliminar Auto");
+        JB_Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_EliminarMouseClicked(evt);
+            }
+        });
+
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout CRUD_AUTOSLayout = new javax.swing.GroupLayout(CRUD_AUTOS.getContentPane());
         CRUD_AUTOS.getContentPane().setLayout(CRUD_AUTOSLayout);
         CRUD_AUTOSLayout.setHorizontalGroup(
             CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                        .addComponent(jLabel24)
-                        .addGap(32, 32, 32)
-                        .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JB_AgregarPersona)
-                            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                                .addComponent(JS_Ensamblaje, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(jLabel28))))
-                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                        .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                                .addComponent(jLabel25)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JS_Pasajeros, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel18)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel15))
-                                .addGap(18, 18, 18)
-                                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                                        .addComponent(CB_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(37, 37, 37)
-                                        .addComponent(JB_Prepar_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(TF_Color, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TF_VIN, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(JS_num_p, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CB_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CB_TipoCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel27)
-                                    .addComponent(jLabel26))
-                                .addGap(25, 25, 25)
-                                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(CB_TipoHibrido, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TF_Precio, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CB_TipoMotor1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 819, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CRUD_AUTOSLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(JB_Modificar)
                 .addGap(120, 120, 120)
-                .addComponent(jButton2)
+                .addComponent(JB_Eliminar)
                 .addGap(327, 327, 327))
+            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                                .addComponent(jLabel24)
+                                .addGap(32, 32, 32)
+                                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JB_AgregarAuto)
+                                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                                        .addComponent(JS_Ensamblaje, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(38, 38, 38)
+                                        .addComponent(jLabel28))))
+                            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                                .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                                        .addComponent(jLabel25)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(JS_Pasajeros, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                                        .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel14)
+                                            .addComponent(jLabel17)
+                                            .addComponent(jLabel18)
+                                            .addComponent(jLabel13)
+                                            .addComponent(jLabel16)
+                                            .addComponent(jLabel15))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                                                .addComponent(CB_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(37, 37, 37)
+                                                .addComponent(JB_Prepar_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(TF_Color, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(TF_VIN, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(JS_num_p, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(CB_Marca, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(CB_TipoCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                                        .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel19)
+                                            .addComponent(jLabel27)
+                                            .addComponent(jLabel26))
+                                        .addGap(25, 25, 25)
+                                        .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(CB_TipoHibrido, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(TF_Precio, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(CB_TipoMotor1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 819, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
+                        .addGap(615, 615, 615)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CRUD_AUTOSLayout.setVerticalGroup(
             CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(CRUD_AUTOSLayout.createSequentialGroup()
                         .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -296,10 +316,10 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                     .addComponent(JS_Ensamblaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(CRUD_AUTOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(JB_Modificar)
+                    .addComponent(JB_Eliminar))
                 .addGap(18, 18, 18)
-                .addComponent(JB_AgregarPersona)
+                .addComponent(JB_AgregarAuto)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
@@ -353,8 +373,19 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JB_AgregarPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_AgregarPersonaMouseClicked
+    private void JB_AgregarAutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_AgregarAutoMouseClicked
         // TODO add your handling code here:
+        Adminstrar_Autos ap = new Adminstrar_Autos("./Autos.sana");
+        ap.cargarArchivo();
+        for (int i = 0; i < ap.getListasAutos().size(); i++) {
+             if(ap.getListasAutos().get(i).getVIN()==Integer.parseInt(TF_VIN.getText())){
+                 while(ap.getListasAutos().get(i).getVIN()==Integer.parseInt(TF_VIN.getText())){
+                     String t=JOptionPane.showInputDialog(CRUD_AUTOS, "El VIN que ingreso ya es usado por otro Auto porfavor ingrese uno nuevo: ");
+                     TF_VIN.setText(t);
+                 }
+             }
+        }
+        
         String TCarro = "";
         Object b = CB_Categoria.getSelectedItem();
         Object bb = CB_Marca.getSelectedItem();
@@ -398,8 +429,6 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         db.desconectar();
-
-        Adminstrar_Autos ap = new Adminstrar_Autos("./Autos.sana");
         ap.cargarArchivo();
         ap.setPersona(a);
         ap.escribirArchivo();
@@ -420,7 +449,7 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         CB_TipoHibrido.setSelectedIndex(0);
         JOptionPane.showMessageDialog(CRUD_AUTOS,
             "El auto fue guardado exsitosamente");
-    }//GEN-LAST:event_JB_AgregarPersonaMouseClicked
+    }//GEN-LAST:event_JB_AgregarAutoMouseClicked
 
     private void JB_Prepar_MarcaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_Prepar_MarcaMouseClicked
         // TODO add your handling code here:
@@ -462,6 +491,53 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                 JT_ListarAutos.setModel(modelo);
                 JDCRUD();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void JB_ModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_ModificarMouseClicked
+        // TODO add your handling code here:
+         Adminstrar_Autos ap = new Adminstrar_Autos("./Autos.sana");
+        int p;
+        p = JT_ListarAutos.getSelectedRow();
+
+        ap.cargarArchivo();
+        int help = ap.getListasAutos().get(p).getVIN();
+        ap.getListasAutos().get(p).setCategegoria(JOptionPane.showInputDialog("Categoria: "));
+        ap.getListasAutos().get(p).setMarca(JOptionPane.showInputDialog("Marca: "));
+        ap.getListasAutos().get(p).setTipo(JOptionPane.showInputDialog("Tipo Carro: "));
+        ap.getListasAutos().get(p).setNum_puertas(Integer.parseInt(JOptionPane.showInputDialog("Numero de Puertas: ")));
+        ap.getListasAutos().get(p).setColor(JOptionPane.showInputDialog("Color: "));
+        ap.getListasAutos().get(p).setMotor(JOptionPane.showInputDialog("Tipo de Motor: "));
+        ap.getListasAutos().get(p).setPrecio(Double.parseDouble(JOptionPane.showInputDialog("Precio: ")));
+        ap.getListasAutos().get(p).setTipo_h(JOptionPane.showInputDialog("Tipo de Hibrido: "));
+        ap.getListasAutos().get(p).setCantidad_p(Integer.parseInt(JOptionPane.showInputDialog("Cantidad de pasajeros: ")));
+        ap.getListasAutos().get(p).setTiempo(Integer.parseInt(JOptionPane.showInputDialog("Tiempo en Ensamblaje: ")));
+        ap.escribirArchivo();
+        DefaultTableModel modelo1
+                = (DefaultTableModel) JT_ListarAutos.getModel();
+             modelo1.setRowCount(0);
+             for (int i = 0; i < ap.getListasAutos().size(); i++) {
+                   Autos a = ap.getListasAutos().get(i);
+                 Object[] newrow={a.getCategegoria(),a.getColor(),a.getMarca(),a.getVIN(),a.getPrecio()};
+                 modelo1.addRow(newrow);
+        }
+         JT_ListarAutos.setModel(modelo1);
+    }//GEN-LAST:event_JB_ModificarMouseClicked
+
+    private void JB_EliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_EliminarMouseClicked
+        // TODO add your handling code here:
+        Adminstrar_Autos ar
+                = new Adminstrar_Autos("./Autos.cbm");
+        int p;
+        p = JT_ListarAutos.getSelectedRow();
+
+        ar.cargarArchivo();
+        ar.getListasAutos().remove(p);
+        ar.escribirArchivo();
+
+        DefaultTableModel modelo1
+                = (DefaultTableModel) JT_ListarAutos.getModel();
+        modelo1.removeRow(p);
+        JT_ListarAutos.setModel(modelo1);
+    }//GEN-LAST:event_JB_EliminarMouseClicked
  public void JDCRUD() {
         CRUD_AUTOS.pack();
         CRUD_AUTOS.setModal(true);
@@ -510,7 +586,9 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> CB_TipoHibrido;
     private javax.swing.JComboBox<String> CB_TipoMotor1;
     private javax.swing.JDialog CRUD_AUTOS;
-    private javax.swing.JButton JB_AgregarPersona;
+    private javax.swing.JButton JB_AgregarAuto;
+    private javax.swing.JButton JB_Eliminar;
+    private javax.swing.JButton JB_Modificar;
     private javax.swing.JButton JB_Prepar_Marca;
     private javax.swing.JSpinner JS_Ensamblaje;
     private javax.swing.JSpinner JS_Pasajeros;
@@ -519,8 +597,7 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
     private javax.swing.JTextField TF_Color;
     private javax.swing.JTextField TF_Precio;
     private javax.swing.JTextField TF_VIN;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
