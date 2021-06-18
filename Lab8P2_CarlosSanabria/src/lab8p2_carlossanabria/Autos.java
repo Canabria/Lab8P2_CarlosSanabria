@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author HP1
  */
 public class Autos implements Serializable{
-    private String categegoria,nombre;
+    private String categegoria;
     private int VIN;
     private String marca,tipo;
     private int num_puertas;
@@ -22,9 +22,8 @@ public class Autos implements Serializable{
     private int cantidad_p,tiempo;
     private static final long SerialVersionUID=789L;
 
-    public Autos(String categegoria, String nombre, int VIN, String marca, String tipo, int num_puertas, String color, String motor, double precio, String tipo_h, int cantidad_p, int tiempo) {
+    public Autos(String categegoria, int VIN, String marca, String tipo, int num_puertas, String color, String motor, double precio, String tipo_h, int cantidad_p, int tiempo) {
         this.categegoria = categegoria;
-        this.nombre = nombre;
         this.VIN = VIN;
         this.marca = marca;
         this.tipo = tipo;
@@ -44,16 +43,6 @@ public class Autos implements Serializable{
     public void setCategegoria(String categegoria) {
         this.categegoria = categegoria;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-   
 
     public int getVIN() {
         return VIN;
@@ -139,7 +128,7 @@ public class Autos implements Serializable{
 
     @Override
     public String toString() {
-        return "Autos{" + "categegoria=" + categegoria + ", nombre=" + nombre + ", VIN=" + VIN + ", marca=" + marca + ", tipo=" + tipo + ", num_puertas=" + num_puertas + ", color=" + color + ", motor=" + motor + ", precio=" + precio + ", tipo_h=" + tipo_h + ", cantidad_p=" + cantidad_p + ", tiempo=" + tiempo + '}';
+        return "Autos{" + "categegoria=" + categegoria + ", VIN=" + VIN + ", marca=" + marca + ", tipo=" + tipo + ", num_puertas=" + num_puertas + ", color=" + color + ", motor=" + motor + ", precio=" + precio + ", tipo_h=" + tipo_h + ", cantidad_p=" + cantidad_p + ", tiempo=" + tiempo + '}';
     }
     
     
