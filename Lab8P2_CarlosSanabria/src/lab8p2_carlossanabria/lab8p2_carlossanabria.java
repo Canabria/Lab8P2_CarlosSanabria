@@ -25,7 +25,7 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         DefaultComboBoxModel modelo1= (DefaultComboBoxModel) CB_Categoria.getModel();
         modelo1.addElement("Default");
         modelo1.addElement("Generalista");
-        modelo1.addElement("Prenium");
+        modelo1.addElement("Premium");
         modelo1.addElement("Deportivo");
         CB_Categoria.setModel(modelo1);
         DefaultComboBoxModel modelo2= (DefaultComboBoxModel) CB_TipoCarro.getModel();
@@ -93,8 +93,8 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         BuscarVIN = new javax.swing.JDialog();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        TF_BuscarVIN = new javax.swing.JTextField();
-        JB_BuscarVIN = new javax.swing.JButton();
+        TF_VIN1 = new javax.swing.JTextField();
+        JB_VIN = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         JT_BusquedaVIN = new javax.swing.JTable();
         BuscarAtributoLibre = new javax.swing.JDialog();
@@ -102,22 +102,22 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         JT_BusquedaAtributo = new javax.swing.JTable();
-        TF_BuscarAtriburoLibre = new javax.swing.JTextField();
-        JB_BuscarAtributoLibre = new javax.swing.JButton();
+        TF_AtriburoLibre = new javax.swing.JTextField();
+        JB_AtributoLibre = new javax.swing.JButton();
         BuscarCategoria = new javax.swing.JDialog();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         JT_BusquedaCategoria = new javax.swing.JTable();
-        TF_BuscarCategoria = new javax.swing.JTextField();
-        JB_BuscarCategoria = new javax.swing.JButton();
+        TF_Categoria = new javax.swing.JTextField();
+        JB_Categoria = new javax.swing.JButton();
         BuscarMarcas = new javax.swing.JDialog();
         jLabel23 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         JT_BusquedaMarcas = new javax.swing.JTable();
-        TF_BuscarMarcas = new javax.swing.JTextField();
-        JB_BuscarMarcas = new javax.swing.JButton();
+        TF_Marcas1 = new javax.swing.JTextField();
+        JB_Marcas1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         JB_SALIR = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -364,10 +364,10 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel6.setText("Buscar:");
 
-        JB_BuscarVIN.setText("Resultados");
-        JB_BuscarVIN.addMouseListener(new java.awt.event.MouseAdapter() {
+        JB_VIN.setText("Resultados");
+        JB_VIN.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JB_BuscarVINMouseClicked(evt);
+                JB_VINMouseClicked(evt);
             }
         });
 
@@ -410,9 +410,9 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                         .addGap(124, 124, 124)
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
-                        .addComponent(TF_BuscarVIN, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TF_VIN1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(JB_BuscarVIN))
+                        .addComponent(JB_VIN))
                     .addGroup(BuscarVINLayout.createSequentialGroup()
                         .addGap(308, 308, 308)
                         .addComponent(jLabel5)))
@@ -427,8 +427,8 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                 .addGroup(BuscarVINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(BuscarVINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(JB_BuscarVIN)
-                        .addComponent(TF_BuscarVIN, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(JB_VIN)
+                        .addComponent(TF_VIN1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(42, Short.MAX_VALUE))
@@ -447,11 +447,11 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Color", "Tipo", "Motor", "Tipo Hibrido", "Numero de Puertas"
+                "Color", "Tipo", "Motor", "Capacidad de pasajero", "Numero de Puertas"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false
@@ -467,10 +467,10 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         });
         jScrollPane6.setViewportView(JT_BusquedaAtributo);
 
-        JB_BuscarAtributoLibre.setText("Resultados");
-        JB_BuscarAtributoLibre.addMouseListener(new java.awt.event.MouseAdapter() {
+        JB_AtributoLibre.setText("Resultados");
+        JB_AtributoLibre.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JB_BuscarAtributoLibreMouseClicked(evt);
+                JB_AtributoLibreMouseClicked(evt);
             }
         });
 
@@ -482,9 +482,9 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel20)
                 .addGap(28, 28, 28)
-                .addComponent(TF_BuscarAtriburoLibre, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TF_AtriburoLibre, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
-                .addComponent(JB_BuscarAtributoLibre)
+                .addComponent(JB_AtributoLibre)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BuscarAtributoLibreLayout.createSequentialGroup()
                 .addGap(0, 67, Short.MAX_VALUE)
@@ -502,8 +502,8 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGap(116, 116, 116)
                 .addGroup(BuscarAtributoLibreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JB_BuscarAtributoLibre)
-                    .addComponent(TF_BuscarAtriburoLibre, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_AtributoLibre)
+                    .addComponent(TF_AtriburoLibre, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -543,10 +543,10 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(JT_BusquedaCategoria);
 
-        JB_BuscarCategoria.setText("Resultados");
-        JB_BuscarCategoria.addMouseListener(new java.awt.event.MouseAdapter() {
+        JB_Categoria.setText("Resultados");
+        JB_Categoria.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JB_BuscarCategoriaMouseClicked(evt);
+                JB_CategoriaMouseClicked(evt);
             }
         });
 
@@ -564,9 +564,9 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                         .addGap(124, 124, 124)
                         .addComponent(jLabel22)
                         .addGap(18, 18, 18)
-                        .addComponent(TF_BuscarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TF_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(JB_BuscarCategoria))
+                        .addComponent(JB_Categoria))
                     .addGroup(BuscarCategoriaLayout.createSequentialGroup()
                         .addGap(308, 308, 308)
                         .addComponent(jLabel21)))
@@ -581,8 +581,8 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                 .addGroup(BuscarCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(BuscarCategoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(JB_BuscarCategoria)
-                        .addComponent(TF_BuscarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(JB_Categoria)
+                        .addComponent(TF_Categoria, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(36, Short.MAX_VALUE))
@@ -621,10 +621,10 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         });
         jScrollPane8.setViewportView(JT_BusquedaMarcas);
 
-        JB_BuscarMarcas.setText("Resultados");
-        JB_BuscarMarcas.addMouseListener(new java.awt.event.MouseAdapter() {
+        JB_Marcas1.setText("Resultados");
+        JB_Marcas1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JB_BuscarMarcasMouseClicked(evt);
+                JB_Marcas1MouseClicked(evt);
             }
         });
 
@@ -642,9 +642,9 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                         .addGap(124, 124, 124)
                         .addComponent(jLabel29)
                         .addGap(18, 18, 18)
-                        .addComponent(TF_BuscarMarcas, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TF_Marcas1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(JB_BuscarMarcas))
+                        .addComponent(JB_Marcas1))
                     .addGroup(BuscarMarcasLayout.createSequentialGroup()
                         .addGap(286, 286, 286)
                         .addComponent(jLabel23)))
@@ -659,8 +659,8 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                 .addGroup(BuscarMarcasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(BuscarMarcasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(JB_BuscarMarcas)
-                        .addComponent(TF_BuscarMarcas, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(JB_Marcas1)
+                        .addComponent(TF_Marcas1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))
@@ -695,12 +695,27 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         jMenu3.setText("Buscar por: ");
 
         jMenuItem2.setText("VIN");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem2);
 
         jMenuItem3.setText("Atributos");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem3);
 
         jMenuItem4.setText("Categoria");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         jMenuItem5.setText("Marcas");
@@ -943,20 +958,102 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_JB_SALIRMouseClicked
 
-    private void JB_BuscarVINMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_BuscarVINMouseClicked
+    private void JB_VINMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_VINMouseClicked
         // TODO add your handling code here:
+        Adminstrar_Autos ap = new Adminstrar_Autos("./Autos.sana");
+        ap.cargarArchivo();
+        int p = 0;
+        DefaultTableModel modelo = (DefaultTableModel) JT_BusquedaVIN.getModel();
+        modelo.setRowCount(0);
+        JT_BusquedaVIN.setModel(modelo);
+        for (int i = 0; i < ap.getListasAutos().size(); i++) {
+            if (ap.getListasAutos().get(i).getVIN()== Integer.parseInt(TF_VIN1.getText())) {
+                p = i;
+                Autos c = ap.getListasAutos().get(p);
+                Object[] newrow = {c.getCategegoria(),
+                 c.getColor(),
+                 c.getMarca(),
+                 c.getVIN(),
+                 c.getPrecio()};
+            modelo.addRow(newrow);
 
-    }//GEN-LAST:event_JB_BuscarVINMouseClicked
+            }
+        }//fin de las condiciones
+        JT_BusquedaVIN.setModel(modelo);
+        
+    }//GEN-LAST:event_JB_VINMouseClicked
 
-    private void JB_BuscarAtributoLibreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_BuscarAtributoLibreMouseClicked
+    private void JB_AtributoLibreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_AtributoLibreMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_JB_BuscarAtributoLibreMouseClicked
+        Adminstrar_Autos ap = new Adminstrar_Autos("./Autos.sana");
+        ap.cargarArchivo();
+        int p = 0;
+        DefaultTableModel modelo = (DefaultTableModel) JT_BusquedaAtributo.getModel();
+        modelo.setRowCount(0);
+        JT_BusquedaAtributo.setModel(modelo);
+        for (int i = 0; i < ap.getListasAutos().size(); i++) {
+            if (Integer.toString(ap.getListasAutos().get(i).getCantidad_p()).equalsIgnoreCase( TF_AtriburoLibre.getText())
+                    || Integer.toString(ap.getListasAutos().get(i).getCantidad_p()).equalsIgnoreCase( TF_AtriburoLibre.getText())
+                    || Double.toString(ap.getListasAutos().get(i).getCantidad_p()).equalsIgnoreCase( TF_AtriburoLibre.getText())
+                    || Integer.toString(ap.getListasAutos().get(i).getCantidad_p()).equalsIgnoreCase( TF_AtriburoLibre.getText())
+                   ) {
+                p = i;
+                Autos a = ap.getListasAutos().get(p);
+                Object[] newrow = {a.getColor(),
+                    a.getTipo(),
+                    a.getMotor(),
+                    a.getCantidad_p(),
+                    a.getNum_puertas()};
+                modelo.addRow(newrow);
+            }
+            if(ap.getListasAutos().get(i).getColor().equalsIgnoreCase(TF_AtriburoLibre.getText())
+                    || ap.getListasAutos().get(i).getMotor().equalsIgnoreCase(TF_AtriburoLibre.getText())
+                    || ap.getListasAutos().get(i).getTipo().equalsIgnoreCase(TF_AtriburoLibre.getText())
+                    || ap.getListasAutos().get(i).getTipo_h().equalsIgnoreCase(TF_AtriburoLibre.getText())){
+                 p = i;
+                Autos a = ap.getListasAutos().get(p);
+                Object[] newrow = {a.getColor(),
+                    a.getTipo(),
+                    a.getMotor(),
+                    a.getCantidad_p(),
+                    a.getNum_puertas()};
+                modelo.addRow(newrow);
+                
+            }
+        }//fin de las condiciones
+        JT_BusquedaAtributo.setModel(modelo);
+    }//GEN-LAST:event_JB_AtributoLibreMouseClicked
 
-    private void JB_BuscarCategoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_BuscarCategoriaMouseClicked
+    private void JB_CategoriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_CategoriaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_JB_BuscarCategoriaMouseClicked
+        Adminstrar_Autos ap = new Adminstrar_Autos("./Autos.sana");
+        ap.cargarArchivo();
+        int p = 0;
+        DefaultTableModel modelo = (DefaultTableModel) JT_BusquedaCategoria.getModel();
+        modelo.setRowCount(0);
+        JT_BusquedaCategoria.setModel(modelo);
+        if (TF_Categoria.getText().equalsIgnoreCase("premium") || TF_Categoria.getText().equalsIgnoreCase("generalista")
+                || TF_Categoria.getText().equalsIgnoreCase("deportivo")) {
+            for (int i = 0; i < ap.getListasAutos().size(); i++) {
+                if (ap.getListasAutos().get(i).getCategegoria().equalsIgnoreCase(TF_Categoria.getText())) {
+                    p = i;
+                    Autos c = ap.getListasAutos().get(p);
+                    Object[] newrow = {c.getCategegoria(),
+                        c.getColor(),
+                        c.getMarca(),
+                        c.getVIN(),
+                        c.getPrecio()};
+                    modelo.addRow(newrow);
+                }//fin del else 
+            }//fin del for                       
+        } else {
+            JOptionPane.showMessageDialog(BuscarCategoria, "Categoria no válido");
+            TF_Categoria.setText("");
+        }
+        JT_BusquedaCategoria.setModel(modelo);
+    }//GEN-LAST:event_JB_CategoriaMouseClicked
 
-    private void JB_BuscarMarcasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_BuscarMarcasMouseClicked
+    private void JB_Marcas1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_Marcas1MouseClicked
         // TODO add your handling code here:
         Adminstrar_Autos ap = new Adminstrar_Autos("./Autos.sana");
         ap.cargarArchivo();
@@ -965,12 +1062,12 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
                 = (DefaultTableModel) JT_BusquedaMarcas.getModel();
         modelo1.setRowCount(0);
         JT_BusquedaMarcas.setModel(modelo1);
-        if (TF_BuscarMarcas.getText().equalsIgnoreCase("Seat") || TF_BuscarMarcas.getText().equalsIgnoreCase("SKoda")
-                || TF_BuscarMarcas.getText().equalsIgnoreCase("Seat") || TF_BuscarMarcas.getText().equalsIgnoreCase("Volkswagen")
-                || TF_BuscarMarcas.getText().equalsIgnoreCase("Bently")|| TF_BuscarMarcas.getText().equalsIgnoreCase("Porsche")
-                || TF_BuscarMarcas.getText().equalsIgnoreCase("Lamborghini")|| TF_BuscarMarcas.getText().equalsIgnoreCase("Bugatti")) {
+        if (TF_Marcas1.getText().equalsIgnoreCase("Seat") || TF_Marcas1.getText().equalsIgnoreCase("SKoda")
+                || TF_Marcas1.getText().equalsIgnoreCase("Audi") || TF_Marcas1.getText().equalsIgnoreCase("Volkswagen")
+                || TF_Marcas1.getText().equalsIgnoreCase("Bently")|| TF_Marcas1.getText().equalsIgnoreCase("Porsche")
+                || TF_Marcas1.getText().equalsIgnoreCase("Lamborghini")|| TF_Marcas1.getText().equalsIgnoreCase("Bugatti")) {
             for (int i = 0; i < ap.getListasAutos().size(); i++) {
-                if (ap.getListasAutos().get(i).getMarca().equalsIgnoreCase(TF_BuscarMarcas.getText())) {
+                if (ap.getListasAutos().get(i).getMarca().equalsIgnoreCase(TF_Marcas1.getText())) {
                     Autos a = ap.getListasAutos().get(i);
                     Object[] newrow={a.getCategegoria(),a.getColor(),a.getMarca(),a.getVIN(),a.getPrecio()};
                     modelo1.addRow(newrow);
@@ -979,16 +1076,31 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
 
         } else {
             JOptionPane.showMessageDialog(BuscarMarcas, "Marca no válida");
-            TF_BuscarMarcas.setText("");
+            TF_Marcas1.setText("");
         }
         JT_BusquedaMarcas.setModel(modelo1);
         
-    }//GEN-LAST:event_JB_BuscarMarcasMouseClicked
+    }//GEN-LAST:event_JB_Marcas1MouseClicked
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
         JDBMARCAS();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        JDBVIN();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        JDBATRI();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        JDBCATEG();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
  public void JDCRUD() {
         CRUD_AUTOS.pack();
         CRUD_AUTOS.setModal(true);
@@ -1000,6 +1112,24 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
         BuscarMarcas.setModal(true);
         BuscarMarcas.setLocationRelativeTo(this);
         BuscarMarcas.setVisible(true);
+    }
+ public void JDBATRI() {
+        BuscarAtributoLibre.pack();
+        BuscarAtributoLibre.setModal(true);
+        BuscarAtributoLibre.setLocationRelativeTo(this);
+        BuscarAtributoLibre.setVisible(true);
+    }
+ public void JDBVIN() {
+        BuscarVIN.pack();
+        BuscarVIN.setModal(true);
+        BuscarVIN.setLocationRelativeTo(this);
+        BuscarVIN.setVisible(true);
+    }
+  public void JDBCATEG() {
+        BuscarCategoria.pack();
+        BuscarCategoria.setModal(true);
+        BuscarCategoria.setLocationRelativeTo(this);
+        BuscarCategoria.setVisible(true);
     }
     /**
      * @param args the command line arguments
@@ -1048,14 +1178,14 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> CB_TipoMotor1;
     private javax.swing.JDialog CRUD_AUTOS;
     private javax.swing.JButton JB_AgregarAuto;
-    private javax.swing.JButton JB_BuscarAtributoLibre;
-    private javax.swing.JButton JB_BuscarCategoria;
-    private javax.swing.JButton JB_BuscarMarcas;
-    private javax.swing.JButton JB_BuscarVIN;
+    private javax.swing.JButton JB_AtributoLibre;
+    private javax.swing.JButton JB_Categoria;
     private javax.swing.JButton JB_Eliminar;
+    private javax.swing.JButton JB_Marcas1;
     private javax.swing.JButton JB_Modificar;
     private javax.swing.JButton JB_Prepar_Marca;
     private javax.swing.JButton JB_SALIR;
+    private javax.swing.JButton JB_VIN;
     private javax.swing.JSpinner JS_Ensamblaje;
     private javax.swing.JSpinner JS_Pasajeros;
     private javax.swing.JSpinner JS_num_p;
@@ -1064,13 +1194,13 @@ public class lab8p2_carlossanabria extends javax.swing.JFrame {
     private javax.swing.JTable JT_BusquedaMarcas;
     private javax.swing.JTable JT_BusquedaVIN;
     private javax.swing.JTable JT_ListarAutos;
-    private javax.swing.JTextField TF_BuscarAtriburoLibre;
-    private javax.swing.JTextField TF_BuscarCategoria;
-    private javax.swing.JTextField TF_BuscarMarcas;
-    private javax.swing.JTextField TF_BuscarVIN;
+    private javax.swing.JTextField TF_AtriburoLibre;
+    private javax.swing.JTextField TF_Categoria;
     private javax.swing.JTextField TF_Color;
+    private javax.swing.JTextField TF_Marcas1;
     private javax.swing.JTextField TF_Precio;
     private javax.swing.JTextField TF_VIN;
+    private javax.swing.JTextField TF_VIN1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;

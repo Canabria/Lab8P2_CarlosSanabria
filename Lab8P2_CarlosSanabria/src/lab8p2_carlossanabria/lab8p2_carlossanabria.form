@@ -421,9 +421,9 @@
                           <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="TF_BuscarVIN" min="-2" pref="223" max="-2" attributes="0"/>
+                          <Component id="TF_VIN1" min="-2" pref="223" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="JB_BuscarVIN" min="-2" max="-2" attributes="0"/>
+                          <Component id="JB_VIN" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
@@ -443,8 +443,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="JB_BuscarVIN" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TF_BuscarVIN" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="JB_VIN" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TF_VIN1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -471,14 +471,14 @@
             <Property name="text" type="java.lang.String" value="Buscar:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="TF_BuscarVIN">
+        <Component class="javax.swing.JTextField" name="TF_VIN1">
         </Component>
-        <Component class="javax.swing.JButton" name="JB_BuscarVIN">
+        <Component class="javax.swing.JButton" name="JB_VIN">
           <Properties>
             <Property name="text" type="java.lang.String" value="Resultados"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_BuscarVINMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_VINMouseClicked"/>
           </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -520,9 +520,9 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Component id="TF_BuscarAtriburoLibre" min="-2" pref="244" max="-2" attributes="0"/>
+                  <Component id="TF_AtriburoLibre" min="-2" pref="244" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                  <Component id="JB_BuscarAtributoLibre" min="-2" max="-2" attributes="0"/>
+                  <Component id="JB_AtributoLibre" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
@@ -544,8 +544,8 @@
                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="JB_BuscarAtributoLibre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="TF_BuscarAtriburoLibre" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="JB_AtributoLibre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="TF_AtriburoLibre" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -586,9 +586,38 @@
                     <Column editable="false" title="Color" type="java.lang.String"/>
                     <Column editable="false" title="Tipo" type="java.lang.String"/>
                     <Column editable="false" title="Motor" type="java.lang.String"/>
-                    <Column editable="false" title="Tipo Hibrido" type="java.lang.String"/>
+                    <Column editable="false" title="Capacidad de pasajero" type="java.lang.Integer"/>
                     <Column editable="false" title="Numero de Puertas" type="java.lang.Integer"/>
                   </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
                 </Property>
                 <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -597,14 +626,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="TF_BuscarAtriburoLibre">
+        <Component class="javax.swing.JTextField" name="TF_AtriburoLibre">
         </Component>
-        <Component class="javax.swing.JButton" name="JB_BuscarAtributoLibre">
+        <Component class="javax.swing.JButton" name="JB_AtributoLibre">
           <Properties>
             <Property name="text" type="java.lang.String" value="Resultados"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_BuscarAtributoLibreMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_AtributoLibreMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
@@ -628,9 +657,9 @@
                           <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                           <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="TF_BuscarCategoria" min="-2" pref="223" max="-2" attributes="0"/>
+                          <Component id="TF_Categoria" min="-2" pref="223" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="JB_BuscarCategoria" min="-2" max="-2" attributes="0"/>
+                          <Component id="JB_Categoria" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
@@ -650,8 +679,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel22" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="JB_BuscarCategoria" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TF_BuscarCategoria" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="JB_Categoria" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TF_Categoria" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -703,14 +732,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="TF_BuscarCategoria">
+        <Component class="javax.swing.JTextField" name="TF_Categoria">
         </Component>
-        <Component class="javax.swing.JButton" name="JB_BuscarCategoria">
+        <Component class="javax.swing.JButton" name="JB_Categoria">
           <Properties>
             <Property name="text" type="java.lang.String" value="Resultados"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_BuscarCategoriaMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_CategoriaMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
@@ -734,9 +763,9 @@
                           <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                           <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="TF_BuscarMarcas" min="-2" pref="223" max="-2" attributes="0"/>
+                          <Component id="TF_Marcas1" min="-2" pref="223" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="JB_BuscarMarcas" min="-2" max="-2" attributes="0"/>
+                          <Component id="JB_Marcas1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="286" max="-2" attributes="0"/>
@@ -756,8 +785,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel29" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="JB_BuscarMarcas" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="TF_BuscarMarcas" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="JB_Marcas1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TF_Marcas1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -809,14 +838,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="TF_BuscarMarcas">
+        <Component class="javax.swing.JTextField" name="TF_Marcas1">
         </Component>
-        <Component class="javax.swing.JButton" name="JB_BuscarMarcas">
+        <Component class="javax.swing.JButton" name="JB_Marcas1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Resultados"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_BuscarMarcasMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_Marcas1MouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
@@ -852,16 +881,25 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="VIN"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+                  </Events>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Atributos"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem3ActionPerformed"/>
+                  </Events>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Categoria"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem4ActionPerformed"/>
+                  </Events>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
                   <Properties>
